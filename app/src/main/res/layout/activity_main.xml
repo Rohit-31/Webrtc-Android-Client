@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llyt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:text="Search Server" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="End Session" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRemoteScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llyt1">
+
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/remoteView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lightGrey"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/b1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/recent"
+            android:paddingStart="20dp" />
+
+        <ImageButton
+            android:id="@+id/b2"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/home"
+            android:paddingStart="20dp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/b3"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:paddingStart="20dp"
+            android:src="@drawable/back3" />
+
+    </LinearLayout>
+</RelativeLayout>
